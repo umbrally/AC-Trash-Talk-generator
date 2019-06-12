@@ -1,0 +1,64 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-lg-10 col-xl-8 mx-auto mb-5 text-center">
+      <span class="title">{{#if option}}你想對{{option}}講幹話? {{else}}你想對誰講幹話?{{/if}}</span>
+    </div>
+  </div>
+  <form method="POST" action="/">
+    <div class="form-row">
+      <div class="col-12 col-md-4 text-center">
+        <div class="card h-100 border-light bg-primary text-light font-weight-bold shadow-lg rounded">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+            class="card-img-top" alt="engineer">
+          <div class="card-footer">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="target" id="engineer" value="工程師"
+                {{{setChecked "工程師" option}}}>
+              <label class="form-check-label" for="engineer">
+                工程師
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 text-center">
+        <div class="card h-100 border-light bg-primary text-light font-weight-bold shadow-lg rounded">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+            class="card-img-top" alt="designer">
+          <div class="card-footer">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="target" id="designer" value="設計師"
+                {{{setChecked "設計師" option}}}>
+              <label class="form-check-label" for="designer">
+                設計師
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 text-center">
+        <div class="card h-100 border-light bg-primary text-light font-weight-bold shadow-lg rounded">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            class="card-img-top" alt="entrepreneur">
+          <div class="card-footer">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="target" id="entrepreneur" value="創業家"
+                {{{setChecked "創業家" option}}}>
+              <label class="form-check-label" for="entrepreneur">
+                創業家
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row mt-5">
+      <div class="col-2">
+        <button class="btn btn-success w-100 btn-lg font-weight-bold" type="submit">產生幹話</button>
+      </div>
+      <div class="col-10 results shadow bg-white rounded">
+        <span>{{trashTalk}}</span>
+      </div>
+    </div>
+  </form>
+</div>
