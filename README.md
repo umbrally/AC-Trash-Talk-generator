@@ -3,6 +3,7 @@
 A web application that generates trash talk randomly.   
 
 # Snapshot
+![image](https://github.com/umbrally/AC-Trash-Talk-generator/blob/master/trash%20talk_generator%20snapshot.PNG)
 
 ## Getting Started
 
